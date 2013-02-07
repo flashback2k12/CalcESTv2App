@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/ScrollView02"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent" >
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="564dp"
+    android:background="@drawable/background_activities" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/angabenAGB"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvKrankheitskostenGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/krankheitskostenGezahlt" />
+
+    <EditText
+        android:id="@+id/etKrankheitskostenGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvKrankheitskostenGezahlt"
+        android:layout_alignBottom="@+id/tvKrankheitskostenGezahlt"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvKrankheitskostenGezahlt"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etKrankheitskostenGezahlt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/angabenHnDL"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvHnDlMitAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvKrankheitskostenGezahlt"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="35dp"
+        android:text="@string/hnDl1" />
+
+    <EditText
+        android:id="@+id/etHnDlMitAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHnDlMitAn"
+        android:layout_alignBottom="@+id/tvHnDlMitAn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvHnDlMitAn"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tv2HnDlMitAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHnDlMitAn"
+        android:layout_below="@+id/etHnDlMitAn"
+        android:layout_marginTop="5dp"
+        android:text="@string/hnDl1_2"
+        android:textSize="@dimen/smallTest" />
+
+    <TextView
+        android:id="@+id/tvHnDlOhneAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv2HnDlMitAn"
+        android:layout_below="@+id/tv2HnDlMitAn"
+        android:layout_marginTop="25dp"
+        android:text="@string/hnDl2" />
+
+    <EditText
+        android:id="@+id/etHnDlOhneAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHnDlOhneAn"
+        android:layout_alignBottom="@+id/tvHnDlOhneAn"
+        android:layout_alignLeft="@+id/etHnDlMitAn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvHnDlHandwerker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHnDlOhneAn"
+        android:layout_below="@+id/tv2HnDlOhneAn"
+        android:layout_marginTop="25dp"
+        android:text="@string/hnDl3" />
+
+    <EditText
+        android:id="@+id/etHnDlHandwerker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHnDlHandwerker"
+        android:layout_alignBottom="@+id/tvHnDlHandwerker"
+        android:layout_alignLeft="@+id/etHnDlOhneAn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/etHnDlMitAn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-15dp"
+        android:text="@string/hnDl4"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/smallTest" />
+
+    <Button
+        android:id="@+id/btnGoToAuswertung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etHnDlHandwerker"
+        android:layout_below="@+id/etHnDlHandwerker"
+        android:layout_marginTop="35dp"
+        android:text="@string/button_weiter" />
+
+    <TextView
+        android:id="@+id/tv2HnDlOhneAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHnDlOhneAn"
+        android:layout_below="@+id/etHnDlOhneAn"
+        android:layout_marginTop="5dp"
+        android:text="@string/hnDl2_2"
+        android:textSize="@dimen/smallTest" />
+    
+	</RelativeLayout>
+</ScrollView>

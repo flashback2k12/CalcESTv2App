@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/ScrollView01"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent" >
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="587dp"
+    android:background="@drawable/background_activities" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/angabenGehalt"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvBruttoGehalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/bruttoGehalt" />
+
+    <EditText
+        android:id="@+id/etBruttoGehalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvBruttoGehalt"
+        android:layout_alignBottom="@+id/tvBruttoGehalt"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvBruttoGehalt"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+    	<requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvLohnSteuer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvBruttoGehalt"
+        android:layout_below="@+id/etBruttoGehalt"
+        android:layout_marginTop="30dp"
+        android:text="@string/lohnSteuer" />
+
+    <EditText
+        android:id="@+id/etLohnSteuer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvLohnSteuer"
+        android:layout_alignBottom="@+id/tvLohnSteuer"
+        android:layout_alignLeft="@+id/etBruttoGehalt"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etSolZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSolZ"
+        android:layout_alignBottom="@+id/tvSolZ"
+        android:layout_alignLeft="@+id/etLohnSteuer"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvSolZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLohnSteuer"
+        android:layout_below="@+id/etLohnSteuer"
+        android:layout_marginTop="30dp"
+        android:text="@string/solZ" />
+
+    <TextView
+        android:id="@+id/tvKV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvSolZ"
+        android:layout_below="@+id/etSolZ"
+        android:layout_marginTop="30dp"
+        android:text="@string/krankenVers" />
+
+    <EditText
+        android:id="@+id/etKV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvKV"
+        android:layout_alignBottom="@+id/tvKV"
+        android:layout_alignLeft="@+id/etSolZ"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvPV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvKV"
+        android:layout_below="@+id/etKV"
+        android:layout_marginTop="30dp"
+        android:text="@string/pflegeVers" />
+
+    <EditText
+        android:id="@+id/etPV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPV"
+        android:layout_alignBottom="@+id/tvPV"
+        android:layout_alignLeft="@+id/etKV"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvPV"
+        android:layout_below="@+id/etPV"
+        android:layout_marginTop="30dp"
+        android:text="@string/rentenVers" />
+
+    <EditText
+        android:id="@+id/etRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvRV"
+        android:layout_alignBottom="@+id/tvRV"
+        android:layout_alignLeft="@+id/etPV"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvAV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvRV"
+        android:layout_below="@+id/tvRV"
+        android:layout_marginTop="30dp"
+        android:text="@string/arbeitslosenVers" />
+
+    <EditText
+        android:id="@+id/etAV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvAV"
+        android:layout_alignBottom="@+id/tvAV"
+        android:layout_alignLeft="@+id/etRV"
+        android:layout_alignRight="@+id/etRV"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvArbeitsMonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvAV"
+        android:layout_below="@+id/tvAV"
+        android:layout_marginTop="30dp"
+        android:text="@string/arbeitsMonate"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/etArbeitsMonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvArbeitsMonate"
+        android:layout_alignBottom="@+id/tvArbeitsMonate"
+        android:layout_alignLeft="@+id/etAV"
+        android:layout_alignRight="@+id/etAV"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnGoToWerbungsKosten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etArbeitsMonate"
+        android:layout_below="@+id/etArbeitsMonate"
+        android:layout_marginTop="35dp"
+        android:text="@string/button_weiter" />
+    
+     </RelativeLayout>
+</ScrollView>

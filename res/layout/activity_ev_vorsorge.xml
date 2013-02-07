@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/ScrollView02"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent" >
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="547dp"
+    android:background="@drawable/background_activities" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/angabenVorsorge"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvHaftpflicht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/haftpflichtVers" />
+
+    <EditText
+        android:id="@+id/etHaftpflicht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHaftpflicht"
+        android:layout_alignBottom="@+id/tvHaftpflicht"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvHaftpflicht"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvUnfall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHaftpflicht"
+        android:layout_below="@+id/etHaftpflicht"
+        android:layout_marginTop="30dp"
+        android:text="@string/unfallVers" />
+
+    <EditText
+        android:id="@+id/etUnfall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvUnfall"
+        android:layout_alignBottom="@+id/tvUnfall"
+        android:layout_alignLeft="@+id/etHaftpflicht"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvBU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvUnfall"
+        android:layout_below="@+id/etUnfall"
+        android:layout_marginTop="30dp"
+        android:text="@string/buVers" />
+
+    <EditText
+        android:id="@+id/etBU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvBU"
+        android:layout_alignBottom="@+id/tvBU"
+        android:layout_alignLeft="@+id/etUnfall"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvRuerup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvBU"
+        android:layout_below="@+id/etBU"
+        android:layout_marginTop="30dp"
+        android:text="@string/ruerupVers" />
+
+    <EditText
+        android:id="@+id/etRuerup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvRuerup"
+        android:layout_alignBottom="@+id/tvRuerup"
+        android:layout_alignLeft="@+id/etBU"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvRiester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvRuerup"
+        android:layout_below="@+id/etRuerup"
+        android:layout_marginTop="30dp"
+        android:text="@string/riesterVers" />
+
+    <EditText
+        android:id="@+id/etRiester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvRiester"
+        android:layout_alignBottom="@+id/tvRiester"
+        android:layout_alignLeft="@+id/etRuerup"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvLvMitKap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvRiester"
+        android:layout_below="@+id/etRiester"
+        android:layout_marginTop="30dp"
+        android:text="@string/lvMitKap" />
+
+    <EditText
+        android:id="@+id/etLvMitKap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvLvMitKap"
+        android:layout_alignBottom="@+id/tvLvMitKap"
+        android:layout_alignLeft="@+id/etRiester"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvLvMitKap2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLvMitKap"
+        android:layout_below="@+id/etLvMitKap"
+        android:layout_marginTop="5dp"
+        android:text="@string/lvMitKap_2"
+        android:textSize="@dimen/smallTest" />
+
+    <TextView
+        android:id="@+id/tvLvOhneKap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLvMitKap2"
+        android:layout_below="@+id/tvLvMitKap2"
+        android:layout_marginTop="25dp"
+        android:text="@string/lvOhneKap" />
+
+    <EditText
+        android:id="@+id/etLvOhneKap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvLvOhneKap"
+        android:layout_alignLeft="@+id/etLvMitKap"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLvOhneKap"
+        android:layout_below="@+id/tvLvOhneKap"
+        android:layout_marginTop="5dp"
+        android:text="@string/lvOhneKap_2"
+        android:textSize="@dimen/smallTest" />
+
+    <Button
+        android:id="@+id/btnGoToAGB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etLvOhneKap"
+        android:layout_below="@+id/etLvOhneKap"
+        android:layout_marginTop="35dp"
+        android:text="@string/button_weiter" />
+    
+	</RelativeLayout>
+</ScrollView>
