@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">CalcESTv2</string>
-    <string name="splashScreen01">\u0022Am schwersten auf der Welt zu verstehen die Einkommensteuer.\u0022</string>
+    <string name="splashScreen01">\u0022Am schwersten auf der Welt zu verstehen ist die Einkommensteuer.\u0022</string>
     <string name="splashScreen02">Albert Einstein (1879 \u002D 1955)</string>
     <string name="headlineChbAuswahlVeranlagung">Wähle deine Veranlagungsart:</string>
     <string name="veranlagungsArt01">Einzelveranlagung</string>

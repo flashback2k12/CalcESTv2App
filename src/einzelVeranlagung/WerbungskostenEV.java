@@ -10,11 +10,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.flashback.calcestv2.R;
 
 public class WerbungskostenEV extends Activity {
 	
+	public EditText etEntfernungWA, etArbeitsTage, etSpendenGezahlt, etArbeitsMittelGezahlt, etTelefonKostenGezahlt;
 	Button btnGoToV;
 	
 	@Override
@@ -23,6 +25,12 @@ public class WerbungskostenEV extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_werbungskosten);
 		
+		etEntfernungWA = (EditText)findViewById(R.id.etEntfernungWA); 
+		etArbeitsTage = (EditText)findViewById(R.id.etArbeitstage);
+		etSpendenGezahlt = (EditText)findViewById(R.id.etSpendenGezahlt);
+		etArbeitsMittelGezahlt = (EditText)findViewById(R.id.etArbeitsmittelGezahlt);
+		etTelefonKostenGezahlt = (EditText)findViewById(R.id.etTelefonkostenGezahlt);
+		
 		btnGoToV = (Button)findViewById(R.id.btnGoToVorsorge);
 		btnGoToV.setOnClickListener(new OnClickListener() {
 			
@@ -30,7 +38,13 @@ public class WerbungskostenEV extends Activity {
 			public void onClick(View v) {
 				
 			startActivity(new Intent(getApplicationContext(), VorsorgeEV.class));	
-				
+			
+			Intent evWerbungsKosten = new Intent(getApplicationContext(), VorsorgeEV.class);
+			evWerbungsKosten.putExtra("EntfernungWA", etEntfernungWA.getText().toString());
+			evWerbungsKosten.putExtra("ArbeitsTage", etArbeitsTage.getText().toString());
+			evWerbungsKosten.putExtra("SpendenGezahlt", etSpendenGezahlt.getText().toString());
+			evWerbungsKosten.putExtra("ArbeitsMittelGezahlt", etArbeitsMittelGezahlt.getText().toString());
+			evWerbungsKosten.putExtra("TelefonKostenGezahlt", etTelefonKostenGezahlt.getText().toString());
 			}
 		});
 		
