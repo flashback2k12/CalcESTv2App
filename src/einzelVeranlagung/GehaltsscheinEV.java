@@ -1,5 +1,6 @@
 package einzelVeranlagung;
 
+import userdaten.UserdatenEV;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +18,6 @@ public class GehaltsscheinEV extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_gehaltsschein);
 		
@@ -38,15 +38,15 @@ public class GehaltsscheinEV extends Activity {
 				
 			startActivity(new Intent(getApplicationContext(), WerbungskostenEV.class));	
 				
-			Intent evGehaltsSchein = new Intent(getApplicationContext(), WerbungskostenEV.class);
-			evGehaltsSchein.putExtra("BruttogehaltMonat", etBruttoGehalt.getText().toString());
-			evGehaltsSchein.putExtra("LohnsteuerMonat", etLohnSteuer.getText().toString());
-			evGehaltsSchein.putExtra("SolZMonat", etSolZ.getText().toString());
-			evGehaltsSchein.putExtra("KvMonat", etKv.getText().toString());
-			evGehaltsSchein.putExtra("PvMonat", etPv.getText().toString());
-			evGehaltsSchein.putExtra("RvMonat", etRv.getText().toString());
-			evGehaltsSchein.putExtra("AvMonat", etAv.getText().toString());
-			evGehaltsSchein.putExtra("ArbeitsMonate", etArbeitsMonate.getText().toString());
+			UserdatenEV user = (UserdatenEV)getApplication();
+			user.setBruttoGehaltMonat(etBruttoGehalt.getText().toString());
+			user.setLohnSteuerMonat(etLohnSteuer.getText().toString());
+			user.setSolzMonat(etSolZ.getText().toString());
+			user.setKvMonat(etKv.getText().toString());
+			user.setPvMonat(etPv.getText().toString());
+			user.setRvMonat(etRv.getText().toString());
+			user.setAvMonat(etAv.getText().toString());
+			user.setArbeitsMonate(etArbeitsMonate.getText().toString());
 			}
 		});
 		

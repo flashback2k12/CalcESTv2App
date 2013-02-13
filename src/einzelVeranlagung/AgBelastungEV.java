@@ -1,6 +1,7 @@
 package einzelVeranlagung;
 
-import com.flashback.calcestv2.Auswertung;
+import userdaten.UserdatenEV;
+
 import com.flashback.calcestv2.R;
 
 import android.app.Activity;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import auswertungen.AuswertungEV;
 
 public class AgBelastungEV extends Activity {
 	
@@ -18,7 +20,6 @@ public class AgBelastungEV extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_agbelastung);
 		
@@ -33,13 +34,13 @@ public class AgBelastungEV extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-			startActivity(new Intent(getApplicationContext(), Auswertung.class));	
+			startActivity(new Intent(getApplicationContext(), AuswertungEV.class));	
 			
-			Intent evAGB = new Intent(getApplicationContext(), Auswertung.class);
-			evAGB.putExtra("KrankheitskostenGezahlt", etKrankheitsKostenGezahlt.getText().toString());
-			evAGB.putExtra("HnDlMitAn", etHaushaltsHilfeMitMinijob.getText().toString());
-			evAGB.putExtra("HnDlOhneAn", etHaushaltsHilfeOhneMinijob.getText().toString());
-			evAGB.putExtra("HnDlHandwerker", etHandwerkerleistung.getText().toString());
+			UserdatenEV user = (UserdatenEV)getApplication();
+			user.setKrankheitsKostenGezahlt(etKrankheitsKostenGezahlt.getText().toString());
+			user.setHaushaltshilfeMitMinijob(etHaushaltsHilfeMitMinijob.getText().toString());
+			user.setHaushaltshilfeOhneMinijob(etHaushaltsHilfeOhneMinijob.getText().toString());
+			user.setHandwerkerLeistung(etHandwerkerleistung.getText().toString());
 			}
 		});
 		

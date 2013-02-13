@@ -1,5 +1,7 @@
 package einzelVeranlagung;
 
+import userdaten.UserdatenEV;
+
 import com.flashback.calcestv2.R;
 
 import android.app.Activity;
@@ -17,7 +19,6 @@ public class VorsorgeEV extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_vorsorge);
 		
@@ -37,14 +38,14 @@ public class VorsorgeEV extends Activity {
 				
 			startActivity(new Intent(getApplicationContext(), AgBelastungEV.class));
 			
-			Intent evVorsorge = new Intent(getApplicationContext(), AgBelastungEV.class);
-			evVorsorge.putExtra("Haftpflict", etHaftpflV.getText().toString());
-			evVorsorge.putExtra("UnfallV", etUnfallV.getText().toString());
-			evVorsorge.putExtra("BuV", etBuV.getText().toString());
-			evVorsorge.putExtra("RuerupV", etRuerupV.getText().toString());
-			evVorsorge.putExtra("RiesterV", etRiesterV.getText().toString());
-			evVorsorge.putExtra("LvMitKap", etLebensVmitKap.getText().toString());
-			evVorsorge.putExtra("LvOhneKap", etLebensVohneKap.getText().toString());
+			UserdatenEV user = (UserdatenEV)getApplication();
+			user.setHapfpfV(etHaftpflV.getText().toString());
+			user.setUnfallV(etUnfallV.getText().toString());
+			user.setBuV(etBuV.getText().toString());
+			user.setRuerupV(etRuerupV.getText().toString());
+			user.setRieserV(etRiesterV.getText().toString());
+			user.setLvMitKap(etLebensVmitKap.getText().toString());
+			user.setLvOhneKap(etLebensVohneKap.getText().toString());
 			}
 		});
 	}

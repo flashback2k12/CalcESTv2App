@@ -91,6 +91,7 @@ android:layout_height="fill_parent" >
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView7"
+        android:layout_alignRight="@+id/textView3"
         android:layout_below="@+id/textView8"
         android:layout_marginTop="5dp"
         android:text="@string/hinweis3"
@@ -120,8 +121,8 @@ android:layout_height="fill_parent" >
         android:id="@+id/btnGoToGehaltsschein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView9"
         android:layout_alignRight="@+id/etSteuerJahr"
+        android:layout_below="@+id/textView8"
         android:text="@string/button_weiter" />
     
 	</RelativeLayout>

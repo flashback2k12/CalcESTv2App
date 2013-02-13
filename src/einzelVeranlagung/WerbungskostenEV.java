@@ -1,5 +1,6 @@
 package einzelVeranlagung;
 
+import userdaten.UserdatenEV;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,7 +22,6 @@ public class WerbungskostenEV extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_werbungskosten);
 		
@@ -39,12 +39,12 @@ public class WerbungskostenEV extends Activity {
 				
 			startActivity(new Intent(getApplicationContext(), VorsorgeEV.class));	
 			
-			Intent evWerbungsKosten = new Intent(getApplicationContext(), VorsorgeEV.class);
-			evWerbungsKosten.putExtra("EntfernungWA", etEntfernungWA.getText().toString());
-			evWerbungsKosten.putExtra("ArbeitsTage", etArbeitsTage.getText().toString());
-			evWerbungsKosten.putExtra("SpendenGezahlt", etSpendenGezahlt.getText().toString());
-			evWerbungsKosten.putExtra("ArbeitsMittelGezahlt", etArbeitsMittelGezahlt.getText().toString());
-			evWerbungsKosten.putExtra("TelefonKostenGezahlt", etTelefonKostenGezahlt.getText().toString());
+			UserdatenEV user = (UserdatenEV)getApplication();
+			user.setEntfernungWA(etEntfernungWA.getText().toString());
+			user.setArbeitsTage(etArbeitsTage.getText().toString());
+			user.setSpendenGezahlt(etSpendenGezahlt.getText().toString());
+			user.setArbeitsmittelGezahlt(etArbeitsMittelGezahlt.getText().toString());
+			user.setTelefonkostenGezahlt(etTelefonKostenGezahlt.getText().toString());
 			}
 		});
 		

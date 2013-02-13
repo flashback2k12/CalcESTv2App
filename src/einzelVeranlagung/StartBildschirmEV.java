@@ -1,6 +1,7 @@
 package einzelVeranlagung;
 
 
+import userdaten.UserdatenEV;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +19,6 @@ public class StartBildschirmEV extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_start);
 		
@@ -29,12 +29,12 @@ public class StartBildschirmEV extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				
-			startActivity(new Intent(getApplicationContext(), GehaltsscheinEV.class));	
 			
-			Intent evSteuerJahr = new Intent(getApplicationContext(), GehaltsscheinEV.class);
-			evSteuerJahr.putExtra("SteuerJahr", etSteuerJahr.getText().toString());
-			startActivity(evSteuerJahr);
+			Intent i = new Intent(getApplicationContext(), GehaltsscheinEV.class);
+			startActivity(i);	
+			
+			UserdatenEV user =(UserdatenEV)getApplication();
+			user.setSteuerJahr(etSteuerJahr.getText().toString());
 			}
 		});
 	

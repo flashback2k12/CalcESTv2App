@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/feedback" android:orderInCategory="100" android:title="@string/button_feedback" android:visible="true" android:showAsAction="ifRoom"></item>
+    <item android:id="@+id/credits" android:orderInCategory="110" android:title="@string/button_credits" android:visible="true" android:showAsAction="ifRoom"></item>
+    
+
+</menu>
