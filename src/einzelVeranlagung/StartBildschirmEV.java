@@ -21,6 +21,7 @@ public class StartBildschirmEV extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_start);
+		setTitle(R.string.title01);
 		
 		etSteuerJahr = (EditText)findViewById(R.id.etSteuerJahr);		
 		

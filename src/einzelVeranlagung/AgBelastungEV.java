@@ -22,6 +22,7 @@ public class AgBelastungEV extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_agbelastung);
+		setTitle(R.string.title05);
 		
 		etKrankheitsKostenGezahlt = (EditText)findViewById(R.id.etKrankheitskostenGezahlt);
 		etHaushaltsHilfeMitMinijob = (EditText)findViewById(R.id.etHnDlMitAn);

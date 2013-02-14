@@ -21,6 +21,7 @@ public class VorsorgeEV extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_vorsorge);
+		setTitle(R.string.title04);
 		
 		etHaftpflV = (EditText)findViewById(R.id.etHaftpflicht);
 		etUnfallV = (EditText)findViewById(R.id.etUnfall);

@@ -26,6 +26,7 @@ public class AuswertungEV extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_auswertung);
+		setTitle(R.string.title06);
 
 		tvLine01 =(TextView)findViewById(R.id.etLine1);
 		tvLine02 =(TextView)findViewById(R.id.etLine2);

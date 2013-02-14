@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">CalcESTv2</string>
     <string name="splashScreen01">\u0022Am schwersten auf der Welt zu verstehen ist die Einkommensteuer.\u0022</string>
     <string name="splashScreen02">Albert Einstein (1879 \u002D 1955)</string>
-    <string name="headlineChbAuswahlVeranlagung">Wähle deine Veranlagungsart:</string>
+    <string name="headlineChbAuswahlVeranlagung">W\u00E4hle deine Veranlagungsart:</string>
     <string name="veranlagungsArt01">Einzelveranlagung</string>
     <string name="veranlagungsArt02">Zusammenveranlagung</string>
     <string name="headline">Berechnung der Einkommensteuer</string>
@@ -13,12 +12,12 @@
     <string name="hinweis"><u>Hinweis:</u></string>
     <string name="hinweis2">Bitte Kommazahlen verwenden!</string>
     <string name="hinweis3">ausser bei Steuerjahr, Arbeitsmonate, Arbeitstage</string>
-    <string name="personenkreis">kinderlose, Gehaltsempfänger</string>
+    <string name="personenkreis">kinderlose, Gehaltsempf\u00E4nger</string>
     <string name="unterlagen">Monatsgehaltsschein, Spendenbescheinigungen, Versicherungsbescheinigungen, Krankheitskosten, Belege fuer Werbungskosten</string>
 	<string name="personenkreis2"><u>Personenkreis:</u></string>
-    <string name="unterlagen2"><u>benoetige Unterlagen:</u></string>
+    <string name="unterlagen2"><u>ben\u00F6tige Unterlagen:</u></string>
     <string name="ZVstart">coming soon!</string>
-    <string name="angabenGehalt"><u>Angaben Gehaltsschein</u></string>
+<!--     <string name="angabenGehalt"><u>Angaben Gehaltsschein</u></string> -->
     <string name="bruttoGehalt">Bruttogehalt:</string>
     <string name="lohnSteuer">Lohnsteuer:</string>
     <string name="solZ">Soli-Zuschlag:</string>
@@ -27,7 +26,7 @@
     <string name="pflegeVers">Pflegevers.:</string>
     <string name="arbeitslosenVers">Arbeitslosenvers.:</string>
     <string name="arbeitsMonate">Arbeitsmonate:</string>
-    <string name="angabeWK"><u>Angaben Werbungskosten</u></string>
+<!--     <string name="angabeWK"><u>Angaben Werbungskosten</u></string> -->
     <string name="entfernungWA">EntfernungsKM:</string>
     <string name="arbeitstage">Arbeitstage/Jahr:</string>
     <string name="spendenGezahlt">Spenden:</string>
@@ -35,8 +34,8 @@
     <string name="telefonkostenGezahlt">Telefonkosten:</string>
     <string name="button_maps">Google Maps</string>
     <string name="button_WK_ABC">WK ABC</string>
-    <string name="angabenVorsorge"><u>Angaben Vorsorge</u></string>  
-     <string name="ruerupVers">Rürup-Vers.:</string>
+<!--     <string name="angabenVorsorge"><u>Angaben Vorsorge</u></string>   -->
+    <string name="ruerupVers">R\u00FCrup-Vers.:</string>
     <string name="riesterVers">Riester-Vers.:</string>
     <string name="buVers">BU-Vers.:</string>
     <string name="unfallVers">Unfall-Vers.:</string>
@@ -45,7 +44,7 @@
     <string name="lvMitKap_2">mit Kaptalwahlrecht</string>
     <string name="lvOhneKap">Lebens-Vers.:</string>
     <string name="lvOhneKap_2">ohne Kapitalwahlrecht</string>
-    <string name="angabenAGB"><u>Angaben außergewöhnliche Belastung</u></string>
+<!--     <string name="angabenAGB"><u>Angaben au\u00dfergew\u00F6hnliche Belastung</u></string> -->
     <string name="krankheitskostenGezahlt">Krankheitskosten:</string>
     <string name="angabenHnDL"><u>Angaben haushaltsnahe Aufwendungen</u></string>
     <string name="hnDl1">Kosten Haushaltskraft:</string>
@@ -54,17 +53,21 @@
     <string name="hnDl2_2">ohne Anstellungsverhaeltnis</string>
     <string name="hnDl3">Handwerkerleistungen:</string>
     <string name="hnDl4">Steuerabzug nur bei unbarer Bezahlung! </string>
-    <string name="auswertung"><u>Auswertung</u></string>
+<!--     <string name="auswertung"><u>Auswertung</u></string> -->
     <string name="button_auswertung">Berechnung</string>
     <string name="createfileact"><u>Erstellung Auswertungsdatei</u></string>
     <string name="tvLines">-</string>
     <string name="button_datei">start</string>
     <string name="sd_pfad">/sdcard/Steuerberechnung/Auswertung.txt</string>
-    <string name="_sdcard_steuerberechnung">/sdcard/Steuerberechnung</string>
+<!--     <string name="_sdcard_steuerberechnung">/sdcard/Steuerberechnung</string> -->
     <string name="button_feedback">Feedback</string>
     <string name="button_credits">Credits</string>
     <string name="tvOpenSoucre">OpenSource</string>
-    
-    
-    
+    <string name="title01"><b>Startbildschirm</b></string>
+    <string name="title02"><b>Gehaltsschein</b></string>
+    <string name="title03"><b>Werbungskosten</b></string>
+    <string name="title04"><b>Vorsorgeaufwendungen</b></string>
+    <string name="title05"><b>Au\u00dfergew\u00F6hnliche Belastungen</b></string>
+    <string name="title06"><b>Auswertung</b></string>
+    <string name="title00"><b>Auswahl der Veranlagungsart</b></string>
 </resources>

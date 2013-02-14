@@ -18,6 +18,7 @@ public class CheckboxAuswahlVeranlagung extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_base_veranlagung_chb);
+		setTitle(R.string.title00);
 	}
 	
 	public void onCheckboxClicked(View view) {

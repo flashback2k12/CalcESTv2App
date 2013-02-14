@@ -20,6 +20,7 @@ public class GehaltsscheinEV extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_gehaltsschein);
+		setTitle(R.string.title02);
 		
 		etBruttoGehalt = (EditText)findViewById(R.id.etBruttoGehalt);
 		etLohnSteuer = (EditText)findViewById(R.id.etLohnSteuer);

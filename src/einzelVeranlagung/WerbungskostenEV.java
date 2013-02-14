@@ -24,6 +24,7 @@ public class WerbungskostenEV extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ev_werbungskosten);
+		setTitle(R.string.title03);
 		
 		etEntfernungWA = (EditText)findViewById(R.id.etEntfernungWA); 
 		etArbeitsTage = (EditText)findViewById(R.id.etArbeitstage);

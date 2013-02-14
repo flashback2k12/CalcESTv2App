@@ -12,24 +12,14 @@ android:layout_height="fill_parent" >
     android:background="@drawable/background_activities" >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/angabenGehalt"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/tvBruttoGehalt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/bruttoGehalt" />
+        android:layout_marginTop="50dp"
+        android:text="@string/bruttoGehalt"
+        android:textColor="@color/text_color_black" />
 
     <EditText
         android:id="@+id/etBruttoGehalt"
@@ -53,7 +43,8 @@ android:layout_height="fill_parent" >
         android:layout_alignLeft="@+id/tvBruttoGehalt"
         android:layout_below="@+id/etBruttoGehalt"
         android:layout_marginTop="30dp"
-        android:text="@string/lohnSteuer" />
+        android:text="@string/lohnSteuer" 
+        android:textColor="@color/text_color_black" />
 
     <EditText
         android:id="@+id/etLohnSteuer"
@@ -84,7 +75,8 @@ android:layout_height="fill_parent" >
         android:layout_alignLeft="@+id/tvLohnSteuer"
         android:layout_below="@+id/etLohnSteuer"
         android:layout_marginTop="30dp"
-        android:text="@string/solZ" />
+        android:text="@string/solZ" 
+        android:textColor="@color/text_color_black" />
 
     <TextView
         android:id="@+id/tvKV"
@@ -93,7 +85,8 @@ android:layout_height="fill_parent" >
         android:layout_alignLeft="@+id/tvSolZ"
         android:layout_below="@+id/etSolZ"
         android:layout_marginTop="30dp"
-        android:text="@string/krankenVers" />
+        android:text="@string/krankenVers"
+        android:textColor="@color/text_color_black"  />
 
     <EditText
         android:id="@+id/etKV"
@@ -113,7 +106,8 @@ android:layout_height="fill_parent" >
         android:layout_alignLeft="@+id/tvKV"
         android:layout_below="@+id/etKV"
         android:layout_marginTop="30dp"
-        android:text="@string/pflegeVers" />
+        android:text="@string/pflegeVers" 
+        android:textColor="@color/text_color_black" />
 
     <EditText
         android:id="@+id/etPV"
@@ -133,7 +127,8 @@ android:layout_height="fill_parent" >
         android:layout_alignLeft="@+id/tvPV"
         android:layout_below="@+id/etPV"
         android:layout_marginTop="30dp"
-        android:text="@string/rentenVers" />
+        android:text="@string/rentenVers" 
+        android:textColor="@color/text_color_black" />
 
     <EditText
         android:id="@+id/etRV"
@@ -153,7 +148,8 @@ android:layout_height="fill_parent" >
         android:layout_alignLeft="@+id/tvRV"
         android:layout_below="@+id/tvRV"
         android:layout_marginTop="30dp"
-        android:text="@string/arbeitslosenVers" />
+        android:text="@string/arbeitslosenVers" 
+        android:textColor="@color/text_color_black" />
 
     <EditText
         android:id="@+id/etAV"
@@ -174,7 +170,8 @@ android:layout_height="fill_parent" >
         android:layout_below="@+id/tvAV"
         android:layout_marginTop="30dp"
         android:text="@string/arbeitsMonate"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/text_color_black"  />
 
     <EditText
         android:id="@+id/etArbeitsMonate"
@@ -194,7 +191,9 @@ android:layout_height="fill_parent" >
         android:layout_alignRight="@+id/etArbeitsMonate"
         android:layout_below="@+id/etArbeitsMonate"
         android:layout_marginTop="30dp"
-        android:text="@string/button_weiter" />
+        android:background="@drawable/background_button_white"
+        android:text="@string/button_weiter"
+        android:textColor="@color/text_color_white" />
     
      </RelativeLayout>
 </ScrollView>

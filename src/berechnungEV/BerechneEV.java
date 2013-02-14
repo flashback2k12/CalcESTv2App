@@ -318,32 +318,43 @@ public class BerechneEV {
  * Berechnung der Einkommensteuerbelastung
  */
 	public static double einkommenSteuer (double zuVerstEinkommen){
-		
+		double est = 0.0;
 		double faktor = 0.0;
-		
+				
 		if ((zuVerstEinkommen == 0) & (zuVerstEinkommen <= 8004))
 		{
-		return 0.0;
+		return est;
 		}
 		else if ((zuVerstEinkommen >= 8005) & (zuVerstEinkommen <= 13469))
 		{
 		faktor = (zuVerstEinkommen - 8004)*0.0001;
-		return Math.round((((912.17 * faktor + 1400) * faktor))*100)/100.00;
+		est = Math.round((((912.17 * faktor + 1400) * faktor))*100)/100.00;
 		}
 		else if ((zuVerstEinkommen >= 13470) & (zuVerstEinkommen <= 52881))
 		{
 		faktor = (zuVerstEinkommen - 13469)*0.0001;
-		return Math.round((((228.74 * faktor + 2397) * faktor) + 1038)*100)/100.00;
+		est = Math.round((((228.74 * faktor + 2397) * faktor) + 1038)*100)/100.00;
 		}
 		else if ((zuVerstEinkommen >= 52882) & (zuVerstEinkommen <= 250730))
 		{
 		faktor = (int) zuVerstEinkommen;
-		return Math.round((0.42 * faktor - 8172)*100)/100.00;
+		est = Math.round((0.42 * faktor - 8172)*100)/100.00;
 		}
 		else
 		{
 		faktor = (int) zuVerstEinkommen;
-		return Math.round((0.45 * faktor - 15694)*100)/100.00;
+		est = Math.round((0.45 * faktor - 15694)*100)/100.00;
+		}
+/*
+ * Kontrolle das agB nicht ins negative faellt
+ */
+		if (est <= 0)
+		{
+		return 0.0;
+		}
+		else
+		{
+		return est;
 		}
 	}
 /*

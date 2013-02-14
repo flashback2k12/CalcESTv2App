@@ -9,36 +9,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
-            android:text="@string/headlineChbAuswahlVeranlagung"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <CheckBox
-            android:id="@+id/chbEinzelveranlagung"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="60dp"
-            android:text="@string/veranlagungsArt01" 
-            android:onClick="onCheckboxClicked"/>
-
         <CheckBox
             android:id="@+id/chbZusammenveranlagung"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/chbEinzelveranlagung"
             android:layout_below="@+id/chbEinzelveranlagung"
-            android:layout_marginTop="60dp"
-            android:text="@string/veranlagungsArt02" 
-            android:onClick="onCheckboxClicked"/>
+            android:layout_marginTop="100dp"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/veranlagungsArt02"
+            android:textColor="@color/text_color_black" />
+
+        <CheckBox
+            android:id="@+id/chbEinzelveranlagung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/veranlagungsArt01"
+            android:textColor="@color/text_color_black" />
 
     </RelativeLayout>
 

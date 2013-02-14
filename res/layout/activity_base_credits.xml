@@ -17,7 +17,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:text="@string/button_credits"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView2"
@@ -27,7 +28,8 @@
             android:layout_below="@+id/textView1"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="50dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines"
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView3"
@@ -36,7 +38,8 @@
             android:layout_alignLeft="@+id/textView2"
             android:layout_below="@+id/textView2"
             android:layout_marginTop="23dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines"
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView4"
@@ -45,7 +48,8 @@
             android:layout_alignLeft="@+id/textView3"
             android:layout_below="@+id/textView3"
             android:layout_marginTop="25dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines" 
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView5"
@@ -54,7 +58,8 @@
             android:layout_alignLeft="@+id/textView4"
             android:layout_below="@+id/textView4"
             android:layout_marginTop="25dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines" 
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView6"
@@ -63,7 +68,8 @@
             android:layout_alignLeft="@+id/textView5"
             android:layout_below="@+id/textView5"
             android:layout_marginTop="25dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines" 
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView7"
@@ -72,7 +78,8 @@
             android:layout_alignLeft="@+id/textView6"
             android:layout_below="@+id/textView6"
             android:layout_marginTop="25dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines" 
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView8"
@@ -81,7 +88,8 @@
             android:layout_alignLeft="@+id/textView7"
             android:layout_below="@+id/textView7"
             android:layout_marginTop="25dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines" 
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView9"
@@ -90,7 +98,8 @@
             android:layout_alignLeft="@+id/textView8"
             android:layout_below="@+id/textView8"
             android:layout_marginTop="25dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines" 
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView10"
@@ -99,7 +108,8 @@
             android:layout_alignLeft="@+id/textView9"
             android:layout_below="@+id/textView9"
             android:layout_marginTop="25dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines" 
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView11"
@@ -108,7 +118,8 @@
             android:layout_alignLeft="@+id/textView10"
             android:layout_below="@+id/textView10"
             android:layout_marginTop="25dp"
-            android:text="@string/tvLines" />
+            android:text="@string/tvLines" 
+            android:textColor="@color/text_color_black" />
 
         <TextView
             android:id="@+id/textView12"
@@ -118,7 +129,8 @@
             android:layout_below="@+id/textView1"
             android:layout_marginTop="15dp"
             android:text="@string/tvOpenSoucre"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/text_color_black" />
 
     </RelativeLayout>
 
