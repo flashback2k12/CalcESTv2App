@@ -41,8 +41,7 @@ public class AuswertungEV extends Activity {
 		tvLine11 =(TextView)findViewById(R.id.etLine11);
 		tvLine12 =(TextView)findViewById(R.id.etLine12);
 		tvLine13 =(TextView)findViewById(R.id.etLine13);
-		tvLine14 =(TextView)findViewById(R.id.etLine14);
-		
+		tvLine14 =(TextView)findViewById(R.id.etLine14);	
 	}
 	
 	@Override

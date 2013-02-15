@@ -3,7 +3,7 @@
     <string name="app_name">CalcESTv2</string>
     <string name="splashScreen01">\u0022Am schwersten auf der Welt zu verstehen ist die Einkommensteuer.\u0022</string>
     <string name="splashScreen02">Albert Einstein (1879 \u002D 1955)</string>
-    <string name="headlineChbAuswahlVeranlagung">W\u00E4hle deine Veranlagungsart:</string>
+<!--     <string name="headlineChbAuswahlVeranlagung">W\u00E4hle deine Veranlagungsart:</string> -->
     <string name="veranlagungsArt01">Einzelveranlagung</string>
     <string name="veranlagungsArt02">Zusammenveranlagung</string>
     <string name="headline">Berechnung der Einkommensteuer</string>
@@ -64,10 +64,11 @@
     <string name="button_credits">Credits</string>
     <string name="tvOpenSoucre">OpenSource</string>
     <string name="title01"><b>Startbildschirm</b></string>
-    <string name="title02"><b>Gehaltsschein</b></string>
+    <string name="title02"><b>Gehaltsschein eines Monats</b></string>
     <string name="title03"><b>Werbungskosten</b></string>
     <string name="title04"><b>Vorsorgeaufwendungen</b></string>
     <string name="title05"><b>Au\u00dfergew\u00F6hnliche Belastungen</b></string>
     <string name="title06"><b>Auswertung</b></string>
     <string name="title00"><b>Auswahl der Veranlagungsart</b></string>
+    <string name="hinweisErgebnis">(+)Nachzahlung / (-)Erstattung</string>
 </resources>

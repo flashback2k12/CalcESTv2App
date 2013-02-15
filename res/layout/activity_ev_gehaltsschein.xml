@@ -182,7 +182,7 @@ android:layout_height="fill_parent" >
         android:layout_alignLeft="@+id/etAV"
         android:layout_alignRight="@+id/etAV"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/btnGoToWerbungsKosten"

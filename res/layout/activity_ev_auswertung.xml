@@ -202,7 +202,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etLine10"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="190dp"
         android:text="@string/createfileact"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/text_color_black" />
@@ -284,6 +284,17 @@
         android:text="@string/sd_pfad"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/text_color_black" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine14"
+        android:layout_below="@+id/etLine14"
+        android:layout_marginTop="15dp"
+        android:text="@string/hinweisErgebnis"
+        android:textColor="@color/text_color_black" />
+
 </RelativeLayout>
 
 </ScrollView>

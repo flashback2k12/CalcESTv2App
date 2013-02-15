@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class VorsorgeEV extends Activity {
 	
@@ -37,17 +38,56 @@ public class VorsorgeEV extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-			startActivity(new Intent(getApplicationContext(), AgBelastungEV.class));
-			
 			UserdatenEV user = (UserdatenEV)getApplication();
-			user.setHapfpfV(etHaftpflV.getText().toString());
-			user.setUnfallV(etUnfallV.getText().toString());
-			user.setBuV(etBuV.getText().toString());
-			user.setRuerupV(etRuerupV.getText().toString());
-			user.setRieserV(etRiesterV.getText().toString());
-			user.setLvMitKap(etLebensVmitKap.getText().toString());
-			user.setLvOhneKap(etLebensVohneKap.getText().toString());
+/*
+ * try-catch-Bloecke zur Pruefung, ob die korrekten Zahlenformate in die jeweiligen EditTexts eingegeben wurden, 
+ * wenn nicht wird eine Fehlermeldung angezeigt
+ * beim letzten try-catch-Block wieder gleichzeitig die naechste Activity gestartet, wenn das korrekte Zahlenformat eingegeben wurde.
+ */			
+			try {
+				double HaftV = Double.parseDouble(etHaftpflV.getText().toString());
+				user.setHapfpfV(String.valueOf(HaftV));
+			} catch (Exception e) {
+				Toast.makeText(getApplicationContext(), "Haftpflichtversicherung ist keine Kommazahl", Toast.LENGTH_SHORT).show();
 			}
+			try {
+				double UnfallV = Double.parseDouble(etUnfallV.getText().toString());
+				user.setUnfallV(String.valueOf(UnfallV));
+			} catch (Exception e) {
+				Toast.makeText(getApplicationContext(), "Unfallversicherung ist keine Kommazahl", Toast.LENGTH_SHORT).show();
+			}
+			try {
+				double BuV = Double.parseDouble(etBuV.getText().toString());
+				user.setBuV(String.valueOf(BuV));
+			} catch (Exception e) {
+				Toast.makeText(getApplicationContext(), "Berufunf\u00E4higkeitsversicherung ist keine Kommazahl", Toast.LENGTH_SHORT).show();
+			}
+			try {
+				double RuV = Double.parseDouble(etRuerupV.getText().toString());
+				user.setRuerupV(String.valueOf(RuV));
+			} catch (Exception e) {
+				Toast.makeText(getApplicationContext(), "R\u00FCrup-Versicherung ist keine Kommazahl", Toast.LENGTH_SHORT).show();
+			}
+			try {
+				double RiV = Double.parseDouble(etRiesterV.getText().toString());
+				user.setRieserV(String.valueOf(RiV));
+			} catch (Exception e) {
+				Toast.makeText(getApplicationContext(), "Riester-Versicherung ist keine Kommazahl", Toast.LENGTH_SHORT).show();
+			}
+			try {
+				double LvMk = Double.parseDouble(etLebensVmitKap.getText().toString());
+				user.setLvMitKap(String.valueOf(LvMk));
+			} catch (Exception e) {
+				Toast.makeText(getApplicationContext(), "Lebensversicherung mit Kapitalwahlrecht ist keine Kommazahl", Toast.LENGTH_SHORT).show();
+			}			
+			try {
+				double LvOk = Double.parseDouble(etLebensVohneKap.getText().toString());
+				user.setLvOhneKap(String.valueOf(LvOk));
+				startActivity(new Intent(getApplicationContext(), AgBelastungEV.class));
+			} catch (Exception e) {
+				Toast.makeText(getApplicationContext(), "Lebensversicherung ohne Kapitalwahlrecht ist keine Kommazahl", Toast.LENGTH_SHORT).show();
+			}
+		}
 		});
 	}
 

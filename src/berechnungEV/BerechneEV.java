@@ -8,7 +8,8 @@ public class BerechneEV {
  */
 	public static double JahresWerte(int arbeitsMonate, double monatsWert){
 		double jahresWert = monatsWert * arbeitsMonate;
-		return Math.round(jahresWert * 100.00) / 100.00;
+//		return Math.round(jahresWert * 100.00) / 100.00;
+		return Math.ceil(jahresWert);
 	}
 /*
  * END
@@ -64,7 +65,8 @@ public class BerechneEV {
 			if (WerbungsKostenGezahlt <= WKPB2012) {
 				WerbungsKostenAbzug = WKPB2012;
 			} else {
-				WerbungsKostenAbzug = Math.round(WerbungsKostenGezahlt * 100.00) / 100.00;
+//				WerbungsKostenAbzug = Math.round(WerbungsKostenGezahlt * 100.00) / 100.00;
+				WerbungsKostenAbzug = Math.ceil(WerbungsKostenGezahlt);
 			}
 			break;
 
@@ -72,7 +74,8 @@ public class BerechneEV {
 			if (WerbungsKostenGezahlt <= WKPB2013) {
 				WerbungsKostenAbzug = WKPB2013;
 			} else {
-				WerbungsKostenAbzug = Math.round(WerbungsKostenGezahlt * 100.00) / 100.00;
+//				WerbungsKostenAbzug = Math.round(WerbungsKostenGezahlt * 100.00) / 100.00;
+				WerbungsKostenAbzug = Math.ceil(WerbungsKostenGezahlt);
 			}
 			break;
 			
@@ -92,7 +95,8 @@ public class BerechneEV {
  */
 	public static double SummeEinkunft(double jahresBruttoLohn,	double werbungsKosten) {
 		double SummeEinkunft = jahresBruttoLohn - werbungsKosten;
-		return Math.round(SummeEinkunft * 100.00) / 100.00;
+//		return Math.round(SummeEinkunft * 100.00) / 100.00;
+		return Math.ceil(SummeEinkunft);
 	}
 /*
  * END
@@ -103,9 +107,9 @@ public class BerechneEV {
  * Berechnung Gesamtbetrag der Einkuenfte ohne zusaetzliche Angaben (Erweiterung in spaeteren Versionen) + Ausgabe gerundetes Ergebnis
  */	
 	public static double GesamtbetragEinkunft(double SummeEinkunft){
-
 		double GesamtbetragEinkunft = SummeEinkunft;
-		return Math.round(GesamtbetragEinkunft*100.00)/100.00;
+//		return Math.round(GesamtbetragEinkunft*100.00)/100.00;
+		return Math.ceil(GesamtbetragEinkunft);
 	}
 /*
  * END
@@ -116,9 +120,9 @@ public class BerechneEV {
  * Berechnung Gesamtbetrag der Einkuenfte mit zusaetzliche Angaben (Erweiterung in spaeteren Versionen) + Ausgabe gerundetes Ergebnis
  */
 	public static double GesamtbetragEinkunftErweitert(double SummeEinkunft,double AlleinerziehendeFB, double AltersFB, double LandwirteFB){
-
 		double GesamtbetragEinkunft = SummeEinkunft - AlleinerziehendeFB - AltersFB - LandwirteFB;
-		return Math.round(GesamtbetragEinkunft*100.00)/100.00;
+//		return Math.round(GesamtbetragEinkunft*100.00)/100.00;
+		return Math.ceil(GesamtbetragEinkunft);
 	}
 /*
  * END
@@ -142,12 +146,12 @@ public class BerechneEV {
 		if ((SpendenGezahlt >= SPENDENPB) & (SpendenGezahlt <= maxSpenden))
 		{
 		spendenAbzug = SpendenGezahlt;
-		return spendenAbzug; 
+		return Math.ceil(spendenAbzug); 
 		}
 		else if ((SpendenGezahlt >= SPENDENPB) & (SpendenGezahlt >= maxSpenden))
 		{
 		spendenAbzug = maxSpenden;
-		return spendenAbzug;
+		return Math.ceil(spendenAbzug);
 		}
 		else
 		{
@@ -307,7 +311,8 @@ public class BerechneEV {
  */
 	public static double zuVerstEinkommen (double gesamtbetragEinkunft, double vorsorgeAufwand, double spendenAbzug, double agBelastungAbzug){
 		double zvE = gesamtbetragEinkunft - vorsorgeAufwand - spendenAbzug - agBelastungAbzug;
-		return Math.round(zvE*100.00)/100.00;
+//		return Math.round(zvE*100.00)/100.00;
+		return Math.ceil(zvE);
 	}
 /*
  * END	
@@ -346,7 +351,7 @@ public class BerechneEV {
 		est = Math.round((0.45 * faktor - 15694)*100)/100.00;
 		}
 /*
- * Kontrolle das agB nicht ins negative faellt
+ * Kontrolle das Einkommensteuer nicht ins negative faellt
  */
 		if (est <= 0)
 		{
@@ -384,10 +389,12 @@ public class BerechneEV {
 		}
 		else if (soliZuschlag <= haerteKlausel)
 		{
-			return Math.round(soliZuschlag*100.00)/100.00;
+//			return Math.round(soliZuschlag*100.00)/100.00;
+			return Math.ceil(soliZuschlag);
 		} else
 		{
-			return Math.round(haerteKlausel*100.00)/100.00; 
+//			return Math.round(haerteKlausel*100.00)/100.00; 
+			return Math.ceil(haerteKlausel);
 		}
 	}
 /*

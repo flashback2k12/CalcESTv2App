@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.flashback.calcestv2.R;
 
@@ -30,12 +31,19 @@ public class StartBildschirmEV extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-			
-			Intent i = new Intent(getApplicationContext(), GehaltsscheinEV.class);
-			startActivity(i);	
-			
+				
 			UserdatenEV user =(UserdatenEV)getApplication();
-			user.setSteuerJahr(etSteuerJahr.getText().toString());
+			
+			try {
+			//Kontrolle ob Steuerjahr ein Integer-Wert ist
+				int SteuerJahr = Integer.parseInt(etSteuerJahr.getText().toString());
+				user.setSteuerJahr(String.valueOf(SteuerJahr));
+			//Gehe zur naechsten Activity, wenn Steuerjahr ein Integer-Wert ist
+				startActivity(new Intent(getApplicationContext(), GehaltsscheinEV.class));	
+			} catch (Exception e) {
+				Toast.makeText(getApplicationContext(), "Steuerjahr ist keine Ganzzahl", Toast.LENGTH_SHORT).show();
+			}
+//			user.setSteuerJahr(etSteuerJahr.getText().toString());
 			}
 		});
 	
