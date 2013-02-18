@@ -101,7 +101,7 @@ public class AuswertungEV extends Activity {
 	
 	public void btnAuswertung (View view){
 /*
- * Variablen aus Userdaten deklarieren
+ * Variablen aus Userdaten deklarieren, Umwandlung von Strings in numaerische Werte
  */
 		UserdatenEV user = (UserdatenEV)getApplication();
 		int mSteuerJahr = Integer.parseInt(user.getSteuerJahr());

@@ -1,24 +1,45 @@
 package com.flashback.calcestv2;
 
 import zusammenVeranlagung.StartBildschirmZV;
-import einzelVeranlagung.StartBildschirmEV;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
+import einzelVeranlagung.StartBildschirmEV;
 
 @SuppressLint("NewApi")
 public class CheckboxAuswahlVeranlagung extends Activity {
 
+	Button btnEV, btnZV;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_base_veranlagung_chb);
 		setTitle(R.string.title00);
+		
+		btnEV = (Button)findViewById(R.id.btnEV);
+		btnEV.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(getApplicationContext(), StartBildschirmEV.class));
+			}
+		});
+		
+		btnZV = (Button)findViewById(R.id.btnZV);
+		btnZV.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(getApplicationContext(), StartBildschirmZV.class));
+			}
+		});
 	}
 	
 	public void onCheckboxClicked(View view) {

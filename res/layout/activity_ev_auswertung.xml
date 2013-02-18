@@ -6,9 +6,7 @@
     android:clickable="true" >
 
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+   	android:layout_width="match_parent"
     android:layout_height="727dp"
     android:background="@drawable/background_activities" >
 
@@ -25,8 +23,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black"
-        tools:ignore="TextViewEdits" />
+        android:textColor="@color/text_color_black"/>
 
     <TextView
         android:id="@+id/etLine3"
@@ -57,9 +54,7 @@
         android:focusableInTouchMode="false"
         android:gravity="left"
         android:text="@string/tvLines"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black"
-        tools:ignore="TextViewEdits" />
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
 
     <TextView
         android:id="@+id/etLine5"

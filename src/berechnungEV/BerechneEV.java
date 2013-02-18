@@ -24,12 +24,12 @@ public class BerechneEV {
 /*
 * init konstanten + notwendige variablen
 */
-		double ENTFERNUNGSPAUSCHALE = 0.3;
-		double KONTOFUEHRUNG = 16.0;
-		double WKPB2012 = 1000.00;
-		double WKPB2013 = 1130.00;
-		double ARBEITSMITTELPB = 110.0;
-		double TELEFONPB = 240.0;
+		final double ENTFERNUNGSPAUSCHALE = 0.3;
+		final double KONTOFUEHRUNG = 16.0;
+		final double WKPB2012 = 1000.00;
+		final double WKPB2013 = 1130.00;
+		final double ARBEITSMITTELPB = 110.0;
+		final double TELEFONPB = 240.0;
 		double WerbungsKostenAbzug = 0.0;
 		double ArbeitsMittelAbzug = 0.0;
 		double TelefonKostenAbzug = 0.0;
@@ -136,8 +136,8 @@ public class BerechneEV {
 /*
  * Variablen deklarieren
  */		
-		double SPENDENPB = 36.00;
-//		Hoechstbetrag des Spendenabzugsberechnen
+		final double SPENDENPB = 36.00;
+		//Hoechstbetrag des Spendenabzugsberechnen
 		double maxSpenden = GesamtBetragEinkunft*20/100;
 		double spendenAbzug;
 /*
@@ -170,23 +170,26 @@ public class BerechneEV {
 /*
  * Variablen deklarieren
  */
-		int GBESTUFE01 = 15340;
-		int GBESTUFE02 = 51130;
+		final int GBESTUFE01 = 15340;
+		final int GBESTUFE02 = 51130;
+		final double ZBSTUFE01 = 0.05;
+		final double ZBSTUFE02 = 0.06;
+		final double ZBSTUFE03 = 0.07;
 		double zumutbareBelastung = 0.0;
 /*
  * Berechnung der zumutbaren Belastung anhand des Gesamtbetrages der Einkuenfte
  */
 		if ((GesamtBetragEinkunft == 0) & (GesamtBetragEinkunft <= GBESTUFE01))
 		{
-		zumutbareBelastung = 0.05;
+		zumutbareBelastung = ZBSTUFE01;
 		}
 		else if ((GesamtBetragEinkunft >= GBESTUFE01) & (GesamtBetragEinkunft <= GBESTUFE02))
 		{
-		zumutbareBelastung = 0.06;
+		zumutbareBelastung = ZBSTUFE02;
 		}
 		else
 		{
-		zumutbareBelastung = 0.07;
+		zumutbareBelastung = ZBSTUFE03;
 		}
 /*
  * Berechnung aussergewoehnliche Belastung
@@ -213,16 +216,35 @@ public class BerechneEV {
  * Berechnung des Vorsorgeaufwands
  */
 	public static double vorsorgeAufwand (int steuerJahr, double RVJahr, double KVJahr, double PVJahr, double AVJahr, double HV, double UV, double BU, double Ruerup, double LvMit, double LvOhne){
-		
-		double SONSVORSORGEPAUSCHAL = 1900.00;
+/*
+ * Variablen deklarieren
+ */
+		final double SONSVORSORGEPAUSCHAL = 1900.00;
 		double vorsorgeAufwand = 0.0;
-		double sonsVorsorgeAufwand = KVJahr+PVJahr+AVJahr+UV+HV+BU+(LvMit*0.88)+LvOhne; 
-		
-		if((KVJahr+PVJahr) <= SONSVORSORGEPAUSCHAL)
+		double sonsVorsorgeAufwand = 0.0;
+/*
+ * Berechnung Vorsorgeaufwand
+ */
+		double vorsorgeAufwandGezahlt = KVJahr+PVJahr;
+/*
+ * Berechnung der sonstigen Vorsorgeaufwendungen
+ */
+		double sonsVorsorgeAufwandGezahlt = KVJahr+PVJahr+AVJahr+UV+HV+BU+(LvMit*0.88)+LvOhne; 
+/*
+ * Kontrolle, ob Vorsorgeaufwand kleiner gleich die Pauschale ist
+ * JA = 2. Kontrolle wird geprueft
+ * NEIN = Summe aus gezahlte KV + PV
+ */
+		if(vorsorgeAufwandGezahlt <= SONSVORSORGEPAUSCHAL)
 		{
-			if(sonsVorsorgeAufwand <= SONSVORSORGEPAUSCHAL)
+/*
+ * Kontrolle, ob sons. Vorsorgeaufwand kleiner gleich Pauschale ist
+ * JA = gezahlte Beitraege
+ * NEIN = Pauschale
+ */
+			if(sonsVorsorgeAufwandGezahlt <= SONSVORSORGEPAUSCHAL)
 			{
-				sonsVorsorgeAufwand = KVJahr+PVJahr+AVJahr+UV+HV+BU+(LvMit*0.88)+LvOhne;
+				sonsVorsorgeAufwand = sonsVorsorgeAufwandGezahlt;
 			}
 			else
 			{
@@ -231,9 +253,11 @@ public class BerechneEV {
 		}
 		else
 		{
-			sonsVorsorgeAufwand = KVJahr+PVJahr;
+			sonsVorsorgeAufwand = vorsorgeAufwandGezahlt;
 		}
-		
+/*
+ * Pruefung des Steuerjahres mit dazugehoerigen jahresabhaengigen Berechnungen fuer den abzugsfaehigen Vorsorgeaufwands	
+ */
 		switch (steuerJahr) {
 		case 2010:
 			{
@@ -263,7 +287,9 @@ public class BerechneEV {
 		default:
 			break;
 		}
-				
+/*
+ * Pruefung des Hoechstbetrages der abzugsfaehigen Vorsorgeaufwendungen
+ */
 		if(steuerJahr == 2010)
 		{
 			if(vorsorgeAufwand <= 14000.00)
@@ -299,7 +325,7 @@ public class BerechneEV {
 			else 
 				return vorsorgeAufwand = 15600.00;
 		}
-		return vorsorgeAufwand = 0;
+		return vorsorgeAufwand = 0.0;
 	}
 /*
  * END
@@ -371,7 +397,7 @@ public class BerechneEV {
  * Berechnung der SoliZuschlagbelastung
  */
 	public static double soliZuschlag (double zuVerstEinkommen, double kapitalSteuer, double einkommenSteuer){
-		double FREIBETRAGSOLI = 972.0; 
+		final double FREIBETRAGSOLI = 972.0; 
 /*
  * berechne soliZuschlag
  */
@@ -407,10 +433,10 @@ public class BerechneEV {
  */
 	public static double hnDlAbzug (double hnDlMitAN, double hnDlOhneAN, double handwerkerL){
 		
-		double HNDLMITANMAX = 510.00;
-		double HNDLOHNEMAX = 4000.00;
-		double HANDWERKERLMAX = 1200.00;
-		double ABZUGFAKTOR = 0.2;
+		final double HNDLMITANMAX = 510.00;
+		final double HNDLOHNEMAX = 4000.00;
+		final double HANDWERKERLMAX = 1200.00;
+		final double ABZUGFAKTOR = 0.2;
 		double hnDlMitAnAbzug = 0.0;
 		double hnDlOhneAnAbzug = 0.0;
 		double handwerkerLAbzug = 0.0;

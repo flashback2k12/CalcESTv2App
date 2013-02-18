@@ -7,7 +7,7 @@
     <RelativeLayout
         android:id="@+id/RelativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="500dp" >
 
         <CheckBox
             android:id="@+id/chbZusammenveranlagung"
@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/chbEinzelveranlagung"
             android:layout_below="@+id/chbEinzelveranlagung"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:onClick="onCheckboxClicked"
             android:text="@string/veranlagungsArt02"
             android:textColor="@color/text_color_black" />
@@ -24,11 +24,35 @@
             android:id="@+id/chbEinzelveranlagung"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="56dp"
             android:onClick="onCheckboxClicked"
             android:text="@string/veranlagungsArt01"
             android:textColor="@color/text_color_black" />
+
+        <Button
+            android:id="@+id/btnEV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnZV"
+            android:layout_alignRight="@+id/btnZV"
+            android:layout_below="@+id/chbZusammenveranlagung"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/background_button_white"
+            android:text="@string/veranlagungsArt01"
+            android:textColor="@color/text_color_white" />
+
+        <Button
+            android:id="@+id/btnZV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnEV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/background_button_white"
+            android:text="@string/veranlagungsArt02"
+            android:textColor="@color/text_color_white" />
 
     </RelativeLayout>
 

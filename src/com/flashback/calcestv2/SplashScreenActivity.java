@@ -14,12 +14,12 @@ public class SplashScreenActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
-		
+		super.onCreate(savedInstanceState);	
 		 //Hides the titlebar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
          //start activity
         setContentView(R.layout.activity_base_splash_screen);
+        setTitle("");
 
         Thread mythread = new Thread() {
             public void run() {
