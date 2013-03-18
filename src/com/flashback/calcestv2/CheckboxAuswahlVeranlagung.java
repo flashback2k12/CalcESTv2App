@@ -1,3 +1,7 @@
+/*
+ * Funktion wurde ersetzt durch Buttons
+ */
+
 package com.flashback.calcestv2;
 
 import zusammenVeranlagung.StartBildschirmZV;
@@ -8,8 +12,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.Toast;
+//import android.widget.CheckBox;
+//import android.widget.Toast;
 import einzelVeranlagung.StartBildschirmEV;
 
 @SuppressLint("NewApi")
@@ -41,7 +45,7 @@ public class CheckboxAuswahlVeranlagung extends Activity {
 			}
 		});
 	}
-	
+	/*
 	public void onCheckboxClicked(View view) {
 	    // Is the view now checked?
 	    boolean checked = ((CheckBox) view).isChecked();
@@ -62,4 +66,5 @@ public class CheckboxAuswahlVeranlagung extends Activity {
 				break;
 	    }
 	}
+	*/
 }

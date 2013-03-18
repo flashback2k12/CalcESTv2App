@@ -2,12 +2,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_activities" >
+    android:background="@drawable/background_activities_sub">
 
     <RelativeLayout
         android:id="@+id/RelativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="525dp" >
+        android:layout_height="525dp" 
+        android:background="@drawable/background_activities">
 
         <TextView
             android:id="@+id/textView1"
