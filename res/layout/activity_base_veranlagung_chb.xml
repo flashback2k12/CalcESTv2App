@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_activities_sub" >
-
+    
     <RelativeLayout
         android:id="@+id/RelativeLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="70dp"
+        android:layout_height="420dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/background_activities" >
 
         <Button
@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnEV"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="27dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/background_button_white"
             android:text="@string/veranlagungsArt02"
             android:textColor="@color/text_color_white" />

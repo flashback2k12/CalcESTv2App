@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView02"
-    android:layout_width="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:clickable="true" 
-    android:background="@drawable/background_activities_sub">
+    android:background="@drawable/background_activities_sub" >
 
-<RelativeLayout
-   	android:layout_width="match_parent"
-    android:layout_height="727dp"
-    android:background="@drawable/background_activities" >
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background_activities"
+            android:orientation="vertical" >
 
     <TextView
         android:id="@+id/etLine1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:clickable="false"
         android:ems="10"
         android:focusable="false"
@@ -24,7 +32,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black"/>
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine3"
@@ -40,7 +48,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine4"
@@ -55,7 +63,8 @@
         android:focusableInTouchMode="false"
         android:gravity="left"
         android:text="@string/tvLines"
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine5"
@@ -71,7 +80,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine2"
@@ -87,7 +96,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine6"
@@ -103,7 +112,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine7"
@@ -119,7 +128,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine8"
@@ -135,7 +144,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine9"
@@ -151,7 +160,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine10"
@@ -167,18 +176,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
-
-    <Button
-        android:id="@+id/btnAuswertung"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/background_button_black"
-        android:onClick="btnAuswertung"
-        android:text="@string/button_auswertung"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine11"
@@ -194,7 +192,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine12"
@@ -210,7 +208,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/etLine13"
@@ -226,7 +224,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey"  />
 
     <TextView
         android:id="@+id/etLine14"
@@ -242,7 +240,7 @@
         android:gravity="left"
         android:text="@string/tvLines"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" >
+        android:textColor="@color/text_color_lightgrey" >
 
         <requestFocus />
     </TextView>
@@ -255,42 +253,35 @@
         android:layout_below="@+id/etLine14"
         android:layout_marginTop="15dp"
         android:text="@string/hinweisErgebnis"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="35dp"
-        android:text="@string/createfileact"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/text_color_black" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/btnCreateFile"
-        android:layout_marginTop="15dp"
-        android:text="@string/sd_pfad"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/text_color_black" />
-
-    <Button
-        android:id="@+id/btnCreateFile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="19dp"
-        android:background="@drawable/background_button_white"
-        android:onClick="btnCreateFile"
-        android:text="@string/button_datei"
-        android:textColor="@color/text_color_white" />
-
-</RelativeLayout>
-
+	</RelativeLayout>
 </ScrollView>
+
+	<Button
+	    android:id="@+id/btnAuswertung"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="150dp"
+	    android:layout_height="50dp"
+	    android:layout_alignBottom="@+id/RelativeLayout2"
+	    android:layout_alignParentLeft="true"
+	    android:background="@drawable/background_button_black"
+	    android:gravity="center"
+	    android:onClick="btnAuswertung"
+	    android:text="@string/button_auswertung"
+	    android:textColor="@color/text_color_black" />
+
+	<Button
+	    android:id="@+id/btnCreateFile"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="150dp"
+	    android:layout_height="50dp"
+	    android:layout_alignBaseline="@+id/btnAuswertung"
+	    android:layout_alignBottom="@+id/btnAuswertung"
+	    android:layout_alignRight="@+id/scrollView1"
+	    android:background="@drawable/background_button_black"
+	    android:onClick="btnCreateFile"
+	    android:text="@string/button_datei"
+	    android:textColor="@color/text_color_black" />
+	
+</RelativeLayout>

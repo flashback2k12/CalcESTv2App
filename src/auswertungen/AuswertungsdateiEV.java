@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class AuswertungsdateiEV {
 
-	public static void erstelle(String l01, String l02, String l03, String l04,
+	public static void erstelle(String steuerJahr, String l01, String l02, String l03, String l04,
 			String l05, String l06, String l07, String l08, String l09,
 			String l010, String l011, String l012, String l013, String l014) {
 
@@ -44,6 +44,10 @@ public class AuswertungsdateiEV {
 				File txtfile = new File(FolderDir, "Auswertung.txt");
 				FileWriter txtwriter = new FileWriter(txtfile);
 				BufferedWriter out = new BufferedWriter(txtwriter);
+				out.write("----------------------------------------------------");
+				out.newLine();
+				out.write(steuerJahr);
+				out.newLine();
 				out.write("----------------------------------------------------");
 				out.newLine();
 				out.write(l01);

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.flashback.calcestv2"
     android:versionCode="1"
-    android:versionName="0.0.4.3" >
+    android:versionName="0.0.5" >
 
     <uses-sdk
         android:minSdkVersion="10"

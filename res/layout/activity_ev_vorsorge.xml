@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/ScrollView02"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent" 
-android:background="@drawable/background_activities_sub">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_activities_sub" >
 
-<RelativeLayout
-  	android:layout_width="match_parent"
-    android:layout_height="563dp"
-    android:background="@drawable/background_activities" >
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" >
 
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background_activities"
+            android:orientation="vertical" >
+            
     <TextView
         android:id="@+id/tvHaftpflicht"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:text="@string/haftpflichtVers"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <EditText
         android:id="@+id/etHaftpflicht"
@@ -30,7 +39,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_marginRight="10dp"
         android:layout_toRightOf="@+id/tvHaftpflicht"
         android:ems="10"
-        android:inputType="numberDecimal" >
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey">
 
         <requestFocus />
     </EditText>
@@ -43,7 +53,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/etHaftpflicht"
         android:layout_marginTop="30dp"
         android:text="@string/unfallVers" 
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey"/>
 
     <EditText
         android:id="@+id/etUnfall"
@@ -54,7 +64,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etHaftpflicht"
         android:layout_alignRight="@+id/etHaftpflicht"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey"/>
 
     <TextView
         android:id="@+id/tvBU"
@@ -64,7 +75,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/etUnfall"
         android:layout_marginTop="30dp"
         android:text="@string/buVers" 
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <EditText
         android:id="@+id/etBU"
@@ -75,7 +86,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etUnfall"
         android:layout_marginRight="10dp"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey"/>
 
     <TextView
         android:id="@+id/tvRuerup"
@@ -85,7 +97,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/etBU"
         android:layout_marginTop="30dp"
         android:text="@string/ruerupVers" 
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <EditText
         android:id="@+id/etRuerup"
@@ -96,7 +108,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etBU"
         android:layout_alignRight="@+id/etBU"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/tvRiester"
@@ -106,7 +119,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/etRuerup"
         android:layout_marginTop="30dp"
         android:text="@string/riesterVers" 
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <EditText
         android:id="@+id/etRiester"
@@ -117,7 +130,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etRuerup"
         android:layout_marginRight="10dp"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey"/>
 
     <TextView
         android:id="@+id/tvLvMitKap"
@@ -127,7 +141,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/etRiester"
         android:layout_marginTop="30dp"
         android:text="@string/lvMitKap" 
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey"/>
 
     <EditText
         android:id="@+id/etLvMitKap"
@@ -138,7 +152,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etRiester"
         android:layout_marginRight="10dp"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey"/>
 
     <TextView
         android:id="@+id/tvLvMitKap2"
@@ -149,7 +164,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_marginTop="5dp"
         android:text="@string/lvMitKap_2"
         android:textSize="@dimen/smallTest" 
-        android:textColor="@color/text_color_black" />
+       	android:textColor="@color/text_color_lightgrey"/>
 
     <TextView
         android:id="@+id/tvLvOhneKap"
@@ -159,7 +174,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/tvLvMitKap2"
         android:layout_marginTop="25dp"
         android:text="@string/lvOhneKap" 
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <EditText
         android:id="@+id/etLvOhneKap"
@@ -169,7 +184,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etLvMitKap"
         android:layout_alignRight="@+id/etLvMitKap"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -180,18 +196,19 @@ android:background="@drawable/background_activities_sub">
         android:layout_marginTop="5dp"
         android:text="@string/lvOhneKap_2"
         android:textSize="@dimen/smallTest" 
-        android:textColor="@color/text_color_black" />
-
-    <Button
-        android:id="@+id/btnGoToAGB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/etLvOhneKap"
-        android:layout_below="@+id/etLvOhneKap"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/background_button_white"
-        android:text="@string/button_weiter"
-        android:textColor="@color/text_color_white" />
-    
+        android:textColor="@color/text_color_lightgrey" />    
+        
 	</RelativeLayout>
 </ScrollView>
+
+	<Button
+        android:id="@+id/btnGoToAGB"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/RelativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/background_button_black"
+        android:gravity="center"
+        android:text="@string/button_weiter"
+        android:textColor="@color/text_color_black" />
+</RelativeLayout>

@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/ScrollView02"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent" 
-android:background="@drawable/background_activities_sub">
-
-<RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
     android:layout_width="match_parent"
-    android:layout_height="559dp"
-    android:background="@drawable/background_activities" >
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_activities_sub" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background_activities"
+            android:orientation="vertical" >
 
     <TextView
         android:id="@+id/tvEntfernungWA"
@@ -16,9 +25,9 @@ android:background="@drawable/background_activities_sub">
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:text="@string/entfernungWA"
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <EditText
         android:id="@+id/etEntfernungWA"
@@ -30,10 +39,10 @@ android:background="@drawable/background_activities_sub">
         android:layout_marginRight="10dp"
         android:layout_toRightOf="@+id/tvEntfernungWA"
         android:ems="10" 
-        android:inputType="numberDecimal">
+        android:inputType="numberDecimal"
+        android:textColor="@color/text_color_lightgrey" >
 
-        <requestFocus />
-
+        <requestFocus/>
     </EditText>
 
     <TextView
@@ -44,7 +53,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/etEntfernungWA"
         android:layout_marginTop="30dp"
         android:text="@string/arbeitstage" 
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <EditText
         android:id="@+id/etArbeitstage"
@@ -55,7 +64,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etEntfernungWA"
         android:layout_marginRight="10dp"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number" 
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/tvSpendenGezahlt"
@@ -65,7 +75,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/etArbeitstage"
         android:layout_marginTop="30dp"
         android:text="@string/spendenGezahlt" 
-        android:textColor="@color/text_color_black" />
+		android:textColor="@color/text_color_lightgrey" />
 
     <EditText
         android:id="@+id/etSpendenGezahlt"
@@ -76,7 +86,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etArbeitstage"
         android:layout_marginRight="10dp"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" />
 
     <EditText
         android:id="@+id/etArbeitsmittelGezahlt"
@@ -87,7 +98,8 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etSpendenGezahlt"
         android:layout_marginRight="10dp"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/tvArbeitsmittelGezahlt"
@@ -97,7 +109,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/tvSpendenGezahlt"
         android:layout_marginTop="30dp"
         android:text="@string/arbeitsmittelGezahlt" 
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey" />
 
     <TextView
         android:id="@+id/tvTelefonkostenGezahlt"
@@ -107,7 +119,7 @@ android:background="@drawable/background_activities_sub">
         android:layout_below="@+id/etArbeitsmittelGezahlt"
         android:layout_marginTop="30dp"
         android:text="@string/telefonkostenGezahlt" 
-        android:textColor="@color/text_color_black" />
+        android:textColor="@color/text_color_lightgrey"  />
 
     <EditText
         android:id="@+id/etTelefonkostenGezahlt"
@@ -118,18 +130,21 @@ android:background="@drawable/background_activities_sub">
         android:layout_alignLeft="@+id/etArbeitsmittelGezahlt"
         android:layout_marginRight="10dp"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" />
 
-    <Button
-        android:id="@+id/btnGoToVorsorge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/etTelefonkostenGezahlt"
-        android:layout_below="@+id/etTelefonkostenGezahlt"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/background_button_white"
-        android:text="@string/button_weiter"
-        android:textColor="@color/text_color_white" />
-       
 	</RelativeLayout>
 </ScrollView>
+
+	<Button
+        android:id="@+id/btnGoToVorsorge"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/RelativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/background_button_black"
+        android:gravity="center"
+        android:text="@string/button_weiter"
+        android:textColor="@color/text_color_black" />
+       
+</RelativeLayout>

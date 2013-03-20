@@ -30,10 +30,12 @@ public class BerechneEV {
 		final double WKPB2013 = 1130.00;
 		final double ARBEITSMITTELPB = 110.0;
 		final double TELEFONPB = 240.0;
+		final int MAXARBEITSTAGE = 220;
 		double WerbungsKostenAbzug = 0.0;
 		double ArbeitsMittelAbzug = 0.0;
 		double TelefonKostenAbzug = 0.0;
 		double WerbungsKostenGezahlt = 0.0;
+		int ArbeitsTageAbzug = 0;
 /*
 * Kontrollstruktur zum Arbeitsmittelabzug --> pauschal oder tatsaechliche ausgaben guenstiger fuer AN
 */
@@ -53,9 +55,17 @@ public class BerechneEV {
 			TelefonKostenAbzug = Math.round(telefonKostenGezahlt * 100.00) / 100.00;
 		}
 /*
+ * Kontrollstruktur zu Arbeistage --> maximal 220 Tage zulässig 
+ */
+		if (arbeitsTage >= MAXARBEITSTAGE) {
+			ArbeitsTageAbzug = MAXARBEITSTAGE;
+		} else {
+			ArbeitsTageAbzug = arbeitsTage;
+		}
+/*
 * Berechnung der gezahlten Werbungskosten
 */
-		WerbungsKostenGezahlt = Math.round(((arbeitsTage * entfernungWA * ENTFERNUNGSPAUSCHALE) + KONTOFUEHRUNG
+		WerbungsKostenGezahlt = Math.round(((ArbeitsTageAbzug * entfernungWA * ENTFERNUNGSPAUSCHALE) + KONTOFUEHRUNG
 						+ ArbeitsMittelAbzug + TelefonKostenAbzug) * 100.00) / 100.00;
 /*
 * Kontrollstruktur zum Werbungskostenabzug --> pauschal oder tatsaechliche ausgaben guenstiger fuer AN + Abgleich des Steuerjahres
@@ -348,34 +358,69 @@ public class BerechneEV {
  * BEGIN
  * Berechnung der Einkommensteuerbelastung
  */
-	public static double einkommenSteuer (double zuVerstEinkommen){
+	public static double einkommenSteuer (int steuerJahr, double zuVerstEinkommen){
 		double est = 0.0;
 		double faktor = 0.0;
-				
-		if ((zuVerstEinkommen == 0) & (zuVerstEinkommen <= 8004))
-		{
-		return est;
+		
+		switch (steuerJahr) {
+		case 2010:
+		case 2011:
+		case 2012:{		
+			if ((zuVerstEinkommen == 0) & (zuVerstEinkommen <= 8004))
+			{
+				return est;
+			}
+			else if ((zuVerstEinkommen >= 8005) & (zuVerstEinkommen <= 13469))
+			{
+				faktor = (zuVerstEinkommen - 8004)*0.0001;
+				est = Math.round((((912.17 * faktor + 1400) * faktor))*100)/100.00;
+			}
+			else if ((zuVerstEinkommen >= 13470) & (zuVerstEinkommen <= 52881))
+			{
+				faktor = (zuVerstEinkommen - 13469)*0.0001;
+				est = Math.round((((228.74 * faktor + 2397) * faktor) + 1038)*100)/100.00;
+			}
+			else if ((zuVerstEinkommen >= 52882) & (zuVerstEinkommen <= 250730))
+			{
+				faktor = (int) zuVerstEinkommen;
+				est = Math.round((0.42 * faktor - 8172)*100)/100.00;
+			}
+			else
+			{
+				faktor = (int) zuVerstEinkommen;
+				est = Math.round((0.45 * faktor - 15694)*100)/100.00;
+			}
+			break;
 		}
-		else if ((zuVerstEinkommen >= 8005) & (zuVerstEinkommen <= 13469))
-		{
-		faktor = (zuVerstEinkommen - 8004)*0.0001;
-		est = Math.round((((912.17 * faktor + 1400) * faktor))*100)/100.00;
+		case 2013:
+		case 2014:{
+			if ((zuVerstEinkommen == 0) & (zuVerstEinkommen <= 8130))
+			{
+				return est;
+			}
+			else if ((zuVerstEinkommen >= 8131) & (zuVerstEinkommen <= 13469))
+			{
+				faktor = (zuVerstEinkommen - 8130)*0.0001;
+				est = Math.round((((933.7 * faktor + 1400) * faktor))*100)/100.00;
+			}
+			else if ((zuVerstEinkommen >= 13470) & (zuVerstEinkommen <= 52881))
+			{
+				faktor = (zuVerstEinkommen - 13469)*0.0001;
+				est = Math.round((((228.74 * faktor + 2397) * faktor) + 1038)*100)/100.00;
+			}
+			else if ((zuVerstEinkommen >= 52882) & (zuVerstEinkommen <= 250730))
+			{
+				faktor = Math.ceil(zuVerstEinkommen);
+				est = Math.round((0.42 * faktor - 8196)*100)/100.00;
+			}
+			else
+			{
+				faktor = Math.ceil(zuVerstEinkommen);
+				est = Math.round((0.45 * faktor - 15718)*100)/100.00;
+			}
+			break;
 		}
-		else if ((zuVerstEinkommen >= 13470) & (zuVerstEinkommen <= 52881))
-		{
-		faktor = (zuVerstEinkommen - 13469)*0.0001;
-		est = Math.round((((228.74 * faktor + 2397) * faktor) + 1038)*100)/100.00;
-		}
-		else if ((zuVerstEinkommen >= 52882) & (zuVerstEinkommen <= 250730))
-		{
-		faktor = (int) zuVerstEinkommen;
-		est = Math.round((0.42 * faktor - 8172)*100)/100.00;
-		}
-		else
-		{
-		faktor = (int) zuVerstEinkommen;
-		est = Math.round((0.45 * faktor - 15694)*100)/100.00;
-		}
+	}
 /*
  * Kontrolle das Einkommensteuer nicht ins negative faellt
  */
