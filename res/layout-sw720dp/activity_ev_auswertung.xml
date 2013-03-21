@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_activities_sub" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background_activities"
+            android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/etLine1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine2"
+        android:layout_below="@+id/etLine2"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine3"
+        android:layout_below="@+id/etLine3"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine4"
+        android:layout_below="@+id/etLine4"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine1"
+        android:layout_below="@+id/etLine1"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine6"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine5"
+        android:layout_below="@+id/etLine5"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine7"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine6"
+        android:layout_below="@+id/etLine6"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine8"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine7"
+        android:layout_below="@+id/etLine7"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine9"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine8"
+        android:layout_below="@+id/etLine8"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine10"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine9"
+        android:layout_below="@+id/etLine9"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine11"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine10"
+        android:layout_below="@+id/etLine10"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine12"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine11"
+        android:layout_below="@+id/etLine11"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/etLine13"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine12"
+        android:layout_below="@+id/etLine12"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey"  />
+
+    <TextView
+        android:id="@+id/etLine14"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine13"
+        android:layout_below="@+id/etLine13"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="left"
+        android:text="@string/tvLines"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" >
+
+        <requestFocus />
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLine14"
+        android:layout_below="@+id/etLine14"
+        android:layout_marginTop="15dp"
+        android:text="@string/hinweisErgebnis"
+        android:textColor="@color/text_color_lightgrey" />
+
+	</RelativeLayout>
+</ScrollView>
+
+	<Button
+	    android:id="@+id/btnAuswertung"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="150dp"
+	    android:layout_height="50dp"
+	    android:layout_alignBottom="@+id/RelativeLayout2"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginLeft="350dp"
+	    android:background="@drawable/background_button_black"
+	    android:gravity="center"
+	    android:onClick="btnAuswertung"
+	    android:text="@string/button_auswertung"
+	    android:textColor="@color/text_color_black" />
+
+	<Button
+	    android:id="@+id/btnCreateFile"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="150dp"
+	    android:layout_height="50dp"
+	    android:layout_alignBaseline="@+id/btnAuswertung"
+	    android:layout_alignBottom="@+id/btnAuswertung"
+	    android:layout_alignRight="@+id/scrollView1"
+	    android:layout_marginRight="350dp"
+	    android:background="@drawable/background_button_black"
+	    android:onClick="btnCreateFile"
+	    android:text="@string/button_datei"
+	    android:textColor="@color/text_color_black" />
+	
+</RelativeLayout>

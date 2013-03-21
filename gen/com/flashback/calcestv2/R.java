@@ -127,16 +127,17 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_base_credits=0x7f030000;
-        public static final int activity_base_popup=0x7f030001;
-        public static final int activity_base_splash_screen=0x7f030002;
-        public static final int activity_base_veranlagung_chb=0x7f030003;
-        public static final int activity_ev_agbelastung=0x7f030004;
-        public static final int activity_ev_auswertung=0x7f030005;
-        public static final int activity_ev_gehaltsschein=0x7f030006;
-        public static final int activity_ev_start=0x7f030007;
-        public static final int activity_ev_vorsorge=0x7f030008;
-        public static final int activity_ev_werbungskosten=0x7f030009;
-        public static final int activity_zv_start=0x7f03000a;
+        public static final int activity_base_fehlermeldung=0x7f030001;
+        public static final int activity_base_popup=0x7f030002;
+        public static final int activity_base_splash_screen=0x7f030003;
+        public static final int activity_base_veranlagung_chb=0x7f030004;
+        public static final int activity_ev_agbelastung=0x7f030005;
+        public static final int activity_ev_auswertung=0x7f030006;
+        public static final int activity_ev_gehaltsschein=0x7f030007;
+        public static final int activity_ev_start=0x7f030008;
+        public static final int activity_ev_vorsorge=0x7f030009;
+        public static final int activity_ev_werbungskosten=0x7f03000a;
+        public static final int activity_zv_start=0x7f03000b;
     }
     public static final class menu {
         public static final int activity_ev_auswertung=0x7f080000;
@@ -183,6 +184,7 @@ public final class R {
         public static final int personenkreis=0x7f05000b;
         public static final int personenkreis2=0x7f05000d;
         public static final int pflegeVers=0x7f050015;
+        public static final int popupFehler=0x7f050040;
         public static final int popup_text=0x7f05003e;
         public static final int rentenVers=0x7f050014;
         public static final int riesterVers=0x7f050020;

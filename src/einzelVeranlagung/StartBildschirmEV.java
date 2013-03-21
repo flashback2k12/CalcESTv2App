@@ -2,13 +2,16 @@ package einzelVeranlagung;
 
 
 import userdaten.UserdatenEV;
+import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.flashback.calcestv2.R;
@@ -17,6 +20,8 @@ public class StartBildschirmEV extends Activity {
 
 	public EditText etSteuerJahr;
 	Button btnGoToGS;
+	boolean steuerJahrGanzZ = false;
+	public PopupWindow mpopup;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +42,29 @@ public class StartBildschirmEV extends Activity {
 			try {
 			//Kontrolle ob Steuerjahr ein Integer-Wert ist
 				int SteuerJahr = Integer.parseInt(etSteuerJahr.getText().toString());
-				user.setSteuerJahr(String.valueOf(SteuerJahr));
-			//Gehe zur naechsten Activity, wenn Steuerjahr ein Integer-Wert ist
-				startActivity(new Intent(getApplicationContext(), GehaltsscheinEV.class));	
+			//Pruefung Steuerjahr zwischen 2010 und 2016 --> Geltungsbereich
+				if((SteuerJahr >= 2010)&&(SteuerJahr <= 2016)){
+					user.setSteuerJahr(String.valueOf(SteuerJahr));
+					steuerJahrGanzZ = true;
+				}else{
+					Toast.makeText(getApplicationContext(), "Steuerjahr ist au\u00dferhalb des Geltungsbereichs!", Toast.LENGTH_SHORT).show();
+				}
 			} catch (Exception e) {
-				Toast.makeText(getApplicationContext(), "Steuerjahr ist keine Ganzzahl", Toast.LENGTH_SHORT).show();
+				View popUpView = getLayoutInflater().inflate(R.layout.activity_base_fehlermeldung, null);
+			    mpopup = new PopupWindow(popUpView, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, true);
+		        mpopup.setAnimationStyle(android.R.style.Animation_Dialog);  
+		        mpopup.showAtLocation(popUpView, Gravity.BOTTOM, 0, 0);
+		    }
+			
+			//Gehe zur naechsten Activity, wenn Steuerjahr FLAG true ist
+			if(steuerJahrGanzZ == true){
+				startActivity(new Intent(getApplicationContext(), GehaltsscheinEV.class));	
 			}
-//			user.setSteuerJahr(etSteuerJahr.getText().toString());
-			}
-		});
-	
-	}
+		}
+	});
+   }
+	//Close FehlermeldungsPopUp
+	 public void CloseFehlerPopUp(View view){
+     	mpopup.dismiss();
+     }	
 }

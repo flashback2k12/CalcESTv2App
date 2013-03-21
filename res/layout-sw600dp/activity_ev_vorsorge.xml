@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_activities_sub" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background_activities"
+            android:orientation="vertical" >
+            
+    <TextView
+        android:id="@+id/tvHaftpflicht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/haftpflichtVers"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etHaftpflicht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHaftpflicht"
+        android:layout_alignBottom="@+id/tvHaftpflicht"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvHaftpflicht"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvUnfall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHaftpflicht"
+        android:layout_below="@+id/etHaftpflicht"
+        android:layout_marginTop="30dp"
+        android:text="@string/unfallVers" 
+        android:textColor="@color/text_color_lightgrey"/>
+
+    <EditText
+        android:id="@+id/etUnfall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvUnfall"
+        android:layout_alignBottom="@+id/tvUnfall"
+        android:layout_alignLeft="@+id/etHaftpflicht"
+        android:layout_alignRight="@+id/etHaftpflicht"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey"/>
+
+    <TextView
+        android:id="@+id/tvBU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvUnfall"
+        android:layout_below="@+id/etUnfall"
+        android:layout_marginTop="30dp"
+        android:text="@string/buVers" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etBU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvBU"
+        android:layout_alignBottom="@+id/tvBU"
+        android:layout_alignLeft="@+id/etUnfall"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey"/>
+
+    <TextView
+        android:id="@+id/tvRuerup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvBU"
+        android:layout_below="@+id/etBU"
+        android:layout_marginTop="30dp"
+        android:text="@string/ruerupVers" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etRuerup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvRuerup"
+        android:layout_alignBottom="@+id/tvRuerup"
+        android:layout_alignLeft="@+id/etBU"
+        android:layout_alignRight="@+id/etBU"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/tvRiester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvRuerup"
+        android:layout_below="@+id/etRuerup"
+        android:layout_marginTop="30dp"
+        android:text="@string/riesterVers" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etRiester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvRiester"
+        android:layout_alignBottom="@+id/tvRiester"
+        android:layout_alignLeft="@+id/etRuerup"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey"/>
+
+    <TextView
+        android:id="@+id/tvLvMitKap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvRiester"
+        android:layout_below="@+id/etRiester"
+        android:layout_marginTop="30dp"
+        android:text="@string/lvMitKap" 
+        android:textColor="@color/text_color_lightgrey"/>
+
+    <EditText
+        android:id="@+id/etLvMitKap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvLvMitKap"
+        android:layout_alignBottom="@+id/tvLvMitKap"
+        android:layout_alignLeft="@+id/etRiester"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey"/>
+
+    <TextView
+        android:id="@+id/tvLvMitKap2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLvMitKap"
+        android:layout_below="@+id/etLvMitKap"
+        android:layout_marginTop="5dp"
+        android:text="@string/lvMitKap_2"
+        android:textSize="@dimen/smallTest" 
+       	android:textColor="@color/text_color_lightgrey"/>
+
+    <TextView
+        android:id="@+id/tvLvOhneKap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLvMitKap2"
+        android:layout_below="@+id/tvLvMitKap2"
+        android:layout_marginTop="25dp"
+        android:text="@string/lvOhneKap" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLvOhneKap"
+        android:layout_below="@+id/tvLvOhneKap"
+        android:layout_marginTop="5dp"
+        android:text="@string/lvOhneKap_2"
+        android:textSize="@dimen/smallTest" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etLvOhneKap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/etLvMitKap"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/text_color_lightgrey" />
+        
+	</RelativeLayout>
+</ScrollView>
+
+	<Button
+        android:id="@+id/btnGoToAGB"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/RelativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/background_button_black"
+        android:gravity="center"
+        android:text="@string/button_weiter"
+        android:textColor="@color/text_color_black" />
+</RelativeLayout>

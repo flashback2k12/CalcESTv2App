@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_activities_sub" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background_activities"
+            android:orientation="vertical" >
+            
+    <TextView
+        android:id="@+id/tvKrankheitskostenGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/krankheitskostenGezahlt"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etKrankheitskostenGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvKrankheitskostenGezahlt"
+        android:layout_alignBottom="@+id/tvKrankheitskostenGezahlt"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvKrankheitskostenGezahlt"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" >
+
+        <requestFocus />
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvHnDlMitAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvKrankheitskostenGezahlt"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="60dp"
+        android:text="@string/hnDl1"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etHnDlMitAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHnDlMitAn"
+        android:layout_alignBottom="@+id/tvHnDlMitAn"
+        android:layout_alignRight="@+id/etKrankheitskostenGezahlt"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tvHnDlMitAn"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/tv2HnDlMitAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHnDlMitAn"
+        android:layout_below="@+id/etHnDlMitAn"
+        android:layout_marginTop="5dp"
+        android:text="@string/hnDl1_2"
+        android:textSize="@dimen/smallTest" 
+        android:textColor="@color/text_color_lightgrey"  />
+
+    <TextView
+        android:id="@+id/tvHnDlOhneAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv2HnDlMitAn"
+        android:layout_below="@+id/tv2HnDlMitAn"
+        android:layout_marginTop="25dp"
+        android:text="@string/hnDl2" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etHnDlOhneAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHnDlOhneAn"
+        android:layout_alignBottom="@+id/tvHnDlOhneAn"
+        android:layout_alignLeft="@+id/etHnDlMitAn"
+        android:layout_alignRight="@+id/etHnDlMitAn"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/tvHnDlHandwerker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHnDlOhneAn"
+        android:layout_below="@+id/tv2HnDlOhneAn"
+        android:layout_marginTop="25dp"
+        android:text="@string/hnDl3" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etHnDlHandwerker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHnDlHandwerker"
+        android:layout_alignBottom="@+id/tvHnDlHandwerker"
+        android:layout_alignLeft="@+id/etHnDlOhneAn"
+        android:layout_alignRight="@+id/etHnDlOhneAn"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/tv2HnDlOhneAn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHnDlOhneAn"
+        android:layout_below="@+id/etHnDlOhneAn"
+        android:layout_marginTop="5dp"
+        android:text="@string/hnDl2_2"
+        android:textSize="@dimen/smallTest" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etKrankheitskostenGezahlt"
+        android:layout_below="@+id/etKrankheitskostenGezahlt"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/angabenHnDL"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="7dp"
+        android:text="@string/hnDl4"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/text_color_lightgrey"
+        android:textSize="@dimen/smallTest" />
+    
+	</RelativeLayout>
+</ScrollView>
+
+ 	<Button
+        android:id="@+id/btnGoToAuswertung"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/RelativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/background_button_black"
+        android:gravity="center"
+        android:text="@string/button_weiter"
+        android:textColor="@color/text_color_black" />
+ 
+</RelativeLayout>

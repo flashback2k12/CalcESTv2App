@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_activities_sub" >
+    
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="380dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_activities" >
+
+        <Button
+            android:id="@+id/btnEV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="420dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/background_button_white"
+            android:text="@string/veranlagungsArt01"
+            android:textColor="@color/text_color_white" />
+
+        <Button
+            android:id="@+id/btnZV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnEV"
+            android:layout_alignBottom="@+id/btnEV"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/btnEV"
+            android:background="@drawable/background_button_white"
+            android:text="@string/veranlagungsArt02"
+            android:textColor="@color/text_color_white" />
+
+    </RelativeLayout>
+
+</ScrollView>

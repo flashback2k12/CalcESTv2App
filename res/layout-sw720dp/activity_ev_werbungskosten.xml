@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_activities_sub" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@drawable/background_activities"
+            android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvEntfernungWA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="450dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/entfernungWA"
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etEntfernungWA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvEntfernungWA"
+        android:layout_alignBottom="@+id/tvEntfernungWA"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvEntfernungWA"
+        android:ems="10" 
+        android:inputType="numberDecimal"
+        android:textColor="@color/text_color_lightgrey" >
+
+        <requestFocus/>
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvArbeitstage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvEntfernungWA"
+        android:layout_below="@+id/etEntfernungWA"
+        android:layout_marginTop="30dp"
+        android:text="@string/arbeitstage" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etArbeitstage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvArbeitstage"
+        android:layout_alignBottom="@+id/tvArbeitstage"
+        android:layout_alignLeft="@+id/etEntfernungWA"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="number" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/tvSpendenGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvArbeitstage"
+        android:layout_below="@+id/etArbeitstage"
+        android:layout_marginTop="30dp"
+        android:text="@string/spendenGezahlt" 
+		android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etSpendenGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSpendenGezahlt"
+        android:layout_alignBottom="@+id/tvSpendenGezahlt"
+        android:layout_alignLeft="@+id/etArbeitstage"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <EditText
+        android:id="@+id/etArbeitsmittelGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvArbeitsmittelGezahlt"
+        android:layout_alignBottom="@+id/tvArbeitsmittelGezahlt"
+        android:layout_alignLeft="@+id/etSpendenGezahlt"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/tvArbeitsmittelGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvSpendenGezahlt"
+        android:layout_below="@+id/tvSpendenGezahlt"
+        android:layout_marginTop="30dp"
+        android:text="@string/arbeitsmittelGezahlt" 
+        android:textColor="@color/text_color_lightgrey" />
+
+    <TextView
+        android:id="@+id/tvTelefonkostenGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvArbeitsmittelGezahlt"
+        android:layout_below="@+id/etArbeitsmittelGezahlt"
+        android:layout_marginTop="30dp"
+        android:text="@string/telefonkostenGezahlt" 
+        android:textColor="@color/text_color_lightgrey"  />
+
+    <EditText
+        android:id="@+id/etTelefonkostenGezahlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTelefonkostenGezahlt"
+        android:layout_alignBottom="@+id/tvTelefonkostenGezahlt"
+        android:layout_alignLeft="@+id/etArbeitsmittelGezahlt"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:inputType="numberDecimal" 
+        android:textColor="@color/text_color_lightgrey" />
+
+	</RelativeLayout>
+</ScrollView>
+
+	<Button
+        android:id="@+id/btnGoToVorsorge"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/RelativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/background_button_black"
+        android:gravity="center"
+        android:text="@string/button_weiter"
+        android:textColor="@color/text_color_black" />
+       
+</RelativeLayout>

@@ -64,4 +64,5 @@
     <string name="hinweisErgebnis">(+)Nachzahlung / (-)Erstattung</string>
     <string name="popup_text">Die Datei wurde unter \n /sdcard/Steuerberechnung \n gespeichert.</string>
     <string name="btn_back">zur\u00FCck</string>
+    <string name="popupFehler">Fehlermeldung! \n \n Bitte die Eingabe prüfen!</string>
 </resources>
